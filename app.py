@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, reca
 
 st.set_page_config(page_title="Credit Card Default ML App", page_icon="💳", layout="wide")
 
-st.title(" Credit Card Default Prediction & Model Evaluation Dashboard")
+st.title("💳 Credit Card Default Prediction & Model Evaluation Dashboard")
 st.markdown("This interactive web application demonstrates the end-to-end Machine Learning deployment workflow using the **Default of Credit Card Clients** dataset.")
 
 # Sidebar
@@ -24,10 +24,10 @@ model_options = {
     "Random Forest": "random_forest.pkl"
 }
 
-selected_model_name = st.sidebar.selectbox("Select ML Model", list(model_options.keys()))[cite: 1]
+selected_model_name = st.sidebar.selectbox("Select ML Model", list(model_options.keys()))
 
 st.sidebar.subheader("Test Data Upload")
-uploaded_file = st.sidebar.file_uploader("Upload test_data.csv", type=["csv"])[cite: 1]
+uploaded_file = st.sidebar.file_uploader("Upload test_data.csv", type=["csv"])
 
 @st.cache_resource
 def load_artifacts(model_filename):
@@ -73,22 +73,22 @@ if uploaded_file is not None:
         f1 = f1_score(y_test, y_pred, zero_division=0)
         mcc = matthews_corrcoef(y_test, y_pred)
 
-        st.markdown(f"### Evaluation Results for: **{selected_model_name}**")[cite: 1]
+        st.markdown(f"### Evaluation Results for: **{selected_model_name}**")
         
         col1, col2, col3, col4, col5, col6 = st.columns(6)
-        col1.metric("Accuracy", f"{acc:.4f}")[cite: 1]
-        col2.metric("AUC Score", f"{auc:.4f}")[cite: 1]
-        col3.metric("Precision", f"{prec:.4f}")[cite: 1]
-        col4.metric("Recall", f"{rec:.4f}")[cite: 1]
-        col5.metric("F1 Score", f"{f1:.4f}")[cite: 1]
-        col6.metric("MCC Score", f"{mcc:.4f}")[cite: 1]
+        col1.metric("Accuracy", f"{acc:.4f}")
+        col2.metric("AUC Score", f"{auc:.4f}")
+        col3.metric("Precision", f"{prec:.4f}")
+        col4.metric("Recall", f"{rec:.4f}")
+        col5.metric("F1 Score", f"{f1:.4f}")
+        col6.metric("MCC Score", f"{mcc:.4f}")
 
         st.markdown("---")
         
         col_left, col_right = st.columns(2)
         
         with col_left:
-            st.subheader("Confusion Matrix")[cite: 1]
+            st.subheader("Confusion Matrix")
             cm = confusion_matrix(y_test, y_pred)
             fig, ax = plt.subplots(figsize=(5, 4))
             sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax)
@@ -97,7 +97,7 @@ if uploaded_file is not None:
             st.pyplot(fig)
             
         with col_right:
-            st.subheader("Classification Report")[cite: 1]
+            st.subheader("Classification Report")
             report = classification_report(y_test, y_pred, output_dict=True, zero_division=0)
             report_df = pd.DataFrame(report).transpose()
             st.dataframe(report_df.style.format(formatter="{:.4f}"))
@@ -107,4 +107,4 @@ if uploaded_file is not None:
     else:
         st.error(f"Model file for {selected_model_name} not found in model/ folder.")
 else:
-    st.info(" Please upload your `test_data.csv` file using the sidebar to view metrics and evaluation results.")[cite: 1]
+    st.info("👈 Please upload your `test_data.csv` file using the sidebar to view metrics and evaluation results.")
