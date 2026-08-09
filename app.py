@@ -26,8 +26,8 @@ model_options = {
 
 selected_model_name = st.sidebar.selectbox("Select ML Model", list(model_options.keys()))
 
-st.sidebar.subheader("Test Data Upload")
-uploaded_file = st.sidebar.file_uploader("Upload test_data.csv", type=["csv"])
+st.sidebar.subheader("Test Data Upload (Optional)")
+uploaded_file = st.sidebar.file_uploader("Upload custom test_data.csv", type=["csv"])
 
 @st.cache_resource
 def load_artifacts(model_filename):
@@ -40,15 +40,21 @@ def load_artifacts(model_filename):
 model_filename = model_options[selected_model_name]
 model, scaler = load_artifacts(model_filename)
 
+# Load test data: Use uploaded file if provided, otherwise auto-load default test_data.csv from repo
 if uploaded_file is not None:
     test_df = pd.read_csv(uploaded_file)
-    st.success("Test dataset successfully loaded!")
-    
+    st.sidebar.success("Custom test data loaded successfully!")
+elif os.path.exists("test_data.csv"):
+    test_df = pd.read_csv("test_data.csv")
+else:
+    test_df = None
+
+if test_df is not None:
     if "target" in test_df.columns:
         X_test = test_df.drop(columns=["target"])
         y_test = test_df["target"]
     else:
-        st.error("Uploaded CSV must contain the 'target' column.")
+        st.error("Dataset must contain the 'target' column.")
         st.stop()
         
     if selected_model_name in ["Logistic Regression", "kNN"]:
@@ -107,4 +113,4 @@ if uploaded_file is not None:
     else:
         st.error(f"Model file for {selected_model_name} not found in model/ folder.")
 else:
-    st.info("👈 Please upload your `test_data.csv` file using the sidebar to view metrics and evaluation results.")
+    st.warning("⚠️ `test_data.csv` not found. Please upload it using the sidebar.")
