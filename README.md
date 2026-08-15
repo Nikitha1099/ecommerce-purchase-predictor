@@ -1,5 +1,10 @@
 # 🛒 E-Commerce Customer Purchase Intention & Model Evaluation Dashboard
 
+## Live Application Deployment
+Access the cloud-hosted Streamlit application here:
+
+👉 Streamlit Live App (https://ecommerce-purchase-predictor-effq2gyfyc7qlmqhtcwtmc.streamlit.app/)
+
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)](https://streamlit.io/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange.svg)](https://scikit-learn.org/)
@@ -67,16 +72,4 @@ ecommerce-purchase-predictor/
 ├── requirements.txt              # Project package dependencies
 ├── test_data.csv                 # Default evaluation test dataset
 └── README.md                     # Comprehensive project documentation
-
----
-
-## 🚀 Local Installation & Execution Guide
-
-Follow these instructions to run the application locally:
-
-1. **Clone the Repository:**
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/ecommerce-purchase-predictor.git](https://github.com/YOUR_USERNAME/ecommerce-purchase-predictor.git)
-   cd ecommerce-purchase-predictor
-
 
