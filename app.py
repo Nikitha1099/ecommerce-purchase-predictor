@@ -8,10 +8,10 @@ import seaborn as sns
 
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score, f1_score, matthews_corrcoef, confusion_matrix, classification_report
 
-st.set_page_config(page_title="Credit Card Default ML App", page_icon="💳", layout="wide")
+st.set_page_config(page_title="E-Commerce Purchase Predictor", page_icon="🛒", layout="wide")
 
-st.title("💳 Credit Card Default Prediction & Model Evaluation Dashboard")
-st.markdown("This interactive web application demonstrates the end-to-end Machine Learning deployment workflow using the **Default of Credit Card Clients** dataset.")
+st.title("🛒 E-Commerce Customer Purchase Intention & Model Evaluation Dashboard")
+st.markdown("This interactive web application demonstrates the end-to-end Machine Learning deployment workflow using the **Online Shoppers Purchasing Intention** dataset.")
 
 # Sidebar
 st.sidebar.header("Configuration Panel")
