@@ -68,6 +68,15 @@ ecommerce-purchase-predictor/
 ├── test_data.csv                 # Default evaluation test dataset
 └── README.md                     # Comprehensive project documentation
 
-'''
+---
+
+## 🚀 Local Installation & Execution Guide
+
+Follow these instructions to run the application locally:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/ecommerce-purchase-predictor.git](https://github.com/YOUR_USERNAME/ecommerce-purchase-predictor.git)
+   cd ecommerce-purchase-predictor
 
 
