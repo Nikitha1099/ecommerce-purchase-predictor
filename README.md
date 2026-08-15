@@ -69,9 +69,5 @@ ecommerce-purchase-predictor/
 └── README.md                     # Comprehensive project documentation
 
 '''
----
 
-## 🌐 Live Web Application Deployment
-***Access the cloud-hosted Streamlit application here:***
 
-***👉 Streamlit Live App (https://ecommerce-purchase-predictor-effq2gyfyc7qlmqhtcwtmc.streamlit.app/)***
