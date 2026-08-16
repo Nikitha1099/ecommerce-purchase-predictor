@@ -79,11 +79,15 @@ ecommerce-purchase-predictor/
 
 A comprehensive evaluation of the 5 supervised classification models was conducted using the test split of the Online Shoppers Purchasing Intention dataset. Because e-commerce datasets are inherently prone to class imbalance (significantly more browsing sessions result in non-purchases than completed checkouts), model selection prioritized robust metrics like **AUC-ROC**, **F1-Score**, and **Matthews Correlation Coefficient (MCC)** over raw Accuracy.
 
+## 📈 Model Performance & Results Analysis
+
+A comprehensive evaluation of the 5 supervised classification models was conducted using the test split of the Online Shoppers Purchasing Intention dataset. Because e-commerce datasets are inherently prone to class imbalance (significantly more browsing sessions result in non-purchases than completed checkouts), model selection prioritized robust metrics like **AUC-ROC**, **F1-Score**, and **Matthews Correlation Coefficient (MCC)** over raw Accuracy.
+
 ### 📊 Comparative Performance Summary
 
 | Model | Accuracy | AUC-Score | Precision | Recall | F1-Score | MCC |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Random Forest Classifier** | **90.4%** | **0.932** | **0.784** | **0.721** | **0.751** | **0.692** |
+| **Random Forest Classifier** | **0.8986** | **0.9254** | **0.784** | **0.721** | **0.751** | **0.692** |
 | **Decision Tree Classifier** | 86.5% | 0.810 | 0.642 | 0.655 | 0.648 | 0.560 |
 | **Logistic Regression** | 88.1% | 0.895 | 0.730 | 0.612 | 0.666 | 0.598 |
 | **k-Nearest Neighbors (kNN)** | 85.9% | 0.802 | 0.635 | 0.580 | 0.606 | 0.509 |
@@ -94,7 +98,7 @@ A comprehensive evaluation of the 5 supervised classification models was conduct
 ### 🔍 Key Insights & Findings
 
 1. **Top Performer (Random Forest Classifier):**
-   * **Why it won:** Ensemble bagging effectively captured non-linear interactions between critical telemetry features—specifically Google Analytics `PageValues`, `ExitRates`, and `ProductRelated_Duration`. 
+   * **Why it won:** Ensemble bagging effectively captured non-linear interactions between critical telemetry features—specifically Google Analytics `PageValues`, `ExitRates`, and `ProductRelated_Duration`.
    * **Metrics Impact:** It achieved the highest balance of Precision and Recall, minimizing both false positives (wasted marketing efforts on low-intent users) and false negatives (missing potential buyers).
 
 2. **Linear Baseline (Logistic Regression):**
