@@ -79,14 +79,6 @@ ecommerce-purchase-predictor/
 
 A comprehensive evaluation of the 5 supervised classification models was conducted using the test split of the Online Shoppers Purchasing Intention dataset. Because e-commerce datasets are inherently prone to class imbalance (significantly more browsing sessions result in non-purchases than completed checkouts), model selection prioritized robust metrics like **AUC-ROC**, **F1-Score**, and **Matthews Correlation Coefficient (MCC)** over raw Accuracy.
 
-## 📈 Model Performance & Results Analysis
-
-A comprehensive evaluation of the 5 supervised classification models was conducted using the test split of the Online Shoppers Purchasing Intention dataset. Because e-commerce datasets are inherently prone to class imbalance (significantly more browsing sessions result in non-purchases than completed checkouts), model selection prioritized robust metrics like **AUC-ROC**, **F1-Score**, and **Matthews Correlation Coefficient (MCC)** over raw Accuracy.
-
-## 📈 Model Performance & Results Analysis
-
-A comprehensive evaluation of the 5 supervised classification models was conducted using the test split of the Online Shoppers Purchasing Intention dataset. Because e-commerce datasets are inherently prone to class imbalance (significantly more browsing sessions result in non-purchases than completed checkouts), model selection prioritized robust metrics like **AUC-ROC**, **F1-Score**, and **Matthews Correlation Coefficient (MCC)** over raw Accuracy.
-
 ### 📊 Comparative Performance Summary
 
 | Model | Accuracy | AUC-Score | Precision | Recall | F1-Score | MCC |
