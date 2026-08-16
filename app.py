@@ -27,7 +27,7 @@ with st.expander("ℹ️ About This Project & Dataset", expanded=False):
     * **Overview:** Binary classification predicting customer purchase intent (`Revenue`: `1` = purchase, `0` = no purchase) based on browsing telemetry.
     * **Dataset:** UCI Online Shoppers Purchasing Intention Dataset.
     * **Models & Metrics:** Benchmarks 5 classifiers across 6 key evaluation metrics.
-    * **Data Input:** Automatically loads default `test_data.csv` or accepts custom CSV uploads via the sidebar.
+    * **Data Input:** Automatically loads the pipeline-generated `test_data.csv` by default, or allows custom test dataset uploads anytime using the sidebar widget.
     """)
 
 st.markdown("---")
