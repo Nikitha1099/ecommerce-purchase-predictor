@@ -83,15 +83,19 @@ A comprehensive evaluation of the 5 supervised classification models was conduct
 
 A comprehensive evaluation of the 5 supervised classification models was conducted using the test split of the Online Shoppers Purchasing Intention dataset. Because e-commerce datasets are inherently prone to class imbalance (significantly more browsing sessions result in non-purchases than completed checkouts), model selection prioritized robust metrics like **AUC-ROC**, **F1-Score**, and **Matthews Correlation Coefficient (MCC)** over raw Accuracy.
 
+## 📈 Model Performance & Results Analysis
+
+A comprehensive evaluation of the 5 supervised classification models was conducted using the test split of the Online Shoppers Purchasing Intention dataset. Because e-commerce datasets are inherently prone to class imbalance (significantly more browsing sessions result in non-purchases than completed checkouts), model selection prioritized robust metrics like **AUC-ROC**, **F1-Score**, and **Matthews Correlation Coefficient (MCC)** over raw Accuracy.
+
 ### 📊 Comparative Performance Summary
 
 | Model | Accuracy | AUC-Score | Precision | Recall | F1-Score | MCC |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Random Forest Classifier** | **0.8986** | **0.9254** | **0.784** | **0.721** | **0.751** | **0.692** |
-| **Decision Tree Classifier** | 86.5% | 0.810 | 0.642 | 0.655 | 0.648 | 0.560 |
-| **Logistic Regression** | 88.1% | 0.895 | 0.730 | 0.612 | 0.666 | 0.598 |
-| **k-Nearest Neighbors (kNN)** | 85.9% | 0.802 | 0.635 | 0.580 | 0.606 | 0.509 |
-| **Gaussian Naive Bayes** | 81.4% | 0.834 | 0.531 | 0.745 | 0.620 | 0.501 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Random Forest Classifier** | **0.8986** | **0.9254** | **0.7840** | **0.7210** | **0.7510** | **0.6920** |
+| **Logistic Regression** | 0.8810 | 0.8950 | 0.7300 | 0.6120 | 0.6660 | 0.5980 |
+| **Decision Tree Classifier** | 0.8650 | 0.8100 | 0.6420 | 0.6550 | 0.6480 | 0.5600 |
+| **k-Nearest Neighbors (kNN)** | 0.8590 | 0.8020 | 0.6350 | 0.5800 | 0.6060 | 0.5090 |
+| **Gaussian Naive Bayes** | 0.8140 | 0.8340 | 0.5310 | 0.7450 | 0.6200 | 0.5010 |
 
 ---
 
