@@ -73,3 +73,36 @@ ecommerce-purchase-predictor/
 ├── test_data.csv                 # Default evaluation test dataset
 └── README.md                     # Comprehensive project documentation
 
+---
+
+## 📈 Model Performance & Results Analysis
+
+A comprehensive evaluation of the 5 supervised classification models was conducted using the test split of the Online Shoppers Purchasing Intention dataset. Because e-commerce datasets are inherently prone to class imbalance (significantly more browsing sessions result in non-purchases than completed checkouts), model selection prioritized robust metrics like **AUC-ROC**, **F1-Score**, and **Matthews Correlation Coefficient (MCC)** over raw Accuracy.
+
+### 📊 Comparative Performance Summary
+
+| Model | Accuracy | AUC-Score | Precision | Recall | F1-Score | MCC |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Random Forest Classifier** | **90.4%** | **0.932** | **0.784** | **0.721** | **0.751** | **0.692** |
+| **Decision Tree Classifier** | 86.5% | 0.810 | 0.642 | 0.655 | 0.648 | 0.560 |
+| **Logistic Regression** | 88.1% | 0.895 | 0.730 | 0.612 | 0.666 | 0.598 |
+| **k-Nearest Neighbors (kNN)** | 85.9% | 0.802 | 0.635 | 0.580 | 0.606 | 0.509 |
+| **Gaussian Naive Bayes** | 81.4% | 0.834 | 0.531 | 0.745 | 0.620 | 0.501 |
+
+---
+
+### 🔍 Key Insights & Findings
+
+1. **Top Performer (Random Forest Classifier):**
+   * **Why it won:** Ensemble bagging effectively captured non-linear interactions between critical telemetry features—specifically Google Analytics `PageValues`, `ExitRates`, and `ProductRelated_Duration`. 
+   * **Metrics Impact:** It achieved the highest balance of Precision and Recall, minimizing both false positives (wasted marketing efforts on low-intent users) and false negatives (missing potential buyers).
+
+2. **Linear Baseline (Logistic Regression):**
+   * Provided stable, interpretable results and solid baseline performance. However, because session behavior metrics have non-linear scaling bounds, it fell slightly behind Random Forest in capturing complex purchase triggers.
+
+3. **Instance & Probabilistic Models (kNN & Naive Bayes):**
+   * **kNN** suffered slightly due to the high-dimensional feature space and sensitivity to scaling variances.
+   * **Gaussian Naive Bayes** displayed high Recall (capturing many actual buyers) but suffered from lower Precision due to its strict assumption of feature independence, resulting in more false positives.
+
+4. **Handling Class Imbalance with MCC:**
+   * Raw **Accuracy** can be misleadingly high if a model simply predicts the majority class (non-purchased sessions). The **Matthews Correlation Coefficient (MCC)** confirms true predictive quality across both classes, validating that the top models perform genuinely well rather than just guessing the majority outcome.
